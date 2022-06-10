@@ -4,6 +4,13 @@
 *::before {
   box-sizing: border-box;
 }
+:root {
+  --header-bg: hsl(0, 0%, 0%);
+  --header-color: hsl(0, 0%, 100%);
+  --header-shadow: 0 0 1em 0 hsla(0, 0%, 0%, 0.26);
+  --footer-bg: hsla(0, 0%, 0%, 0.5);
+  --footer-color: hsl(0, 0%, 100%);
+}
 html {
   font-size: 62.5%;
 }
@@ -18,10 +25,20 @@ body {
 body > * {
   padding: 1rem;
 }
-h1 {
+header {
+  background: var(--header-bg);
+  box-shadow: var(--header-shadow);
+}
+header h1 {
   margin: 0;
+  color: var(--header-color);
+  font-weight: 400;
 }
 footer {
-  text-align: center;
+  background: var(--footer-bg);
+  color: var(--footer-color);
   font-size: 1.2rem;
+  text-align: center;
+  margin: auto;
+  border-radius: 0.5em 0.5em 0 0;
 }
